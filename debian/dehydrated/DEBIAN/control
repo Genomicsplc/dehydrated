@@ -1,0 +1,18 @@
+Package: dehydrated
+Version: 0.6.2-ubuntu1
+Architecture: all
+Maintainer: Genomics IT Support <it-support@genomicsplc.com>
+Installed-Size: 167
+Depends: ca-certificates, curl, openssl, debconf (>= 0.5) | debconf-2.0
+Section: misc
+Priority: optional
+Homepage: https://github.com/lukas2511/dehydrated
+Description: ACME client implemented in Bash
+ The dehydrated ACME client allows signing certificates with an
+ ACME server, like the one provided by the Let’s Encrypt certificate
+ authority (letsencrypt.org).  It is implemented as a relatively simple
+ Bash script, which uses curl to communicate with the ACME server and
+ OpenSSL to deal with keys, sign requests and certificates.
+ .
+ The ACME (Automated Certificate Management Environment) protocol makes
+ it possible to automatically obtain browser-trusted certificate.

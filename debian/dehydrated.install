@@ -1,0 +1,3 @@
+#! /usr/bin/dh-exec
+debian/config => /etc/dehydrated/config
+dehydrated /usr/bin/

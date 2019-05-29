@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_installman:
+	./debian/generate-manpage > debian/dehydrated.1
+	dh_installman
+
+override_dh_installdocs:
+	dh_installdocs
+	rm -rv $(CURDIR)/debian/dehydrated/usr/share/doc/dehydrated/docs/examples
+
+get-orig-source:
+	uscan --verbose --rename --force
